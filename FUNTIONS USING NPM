@@ -1,0 +1,48 @@
+. `lodash` for utility functions:
+   javascript
+   const _ = require('lodash');
+
+   // Example usage of lodash to capitalize a string
+   const capitalizedString = _.capitalize('hello world');
+   console.log(capitalizedString);
+
+   2. `axios` for making HTTP requests:
+   javascript
+   const axios = require('axios');
+
+   // Example GET request using axios
+   axios.get('https://jsonplaceholder.typicode.com/posts/1')
+     .then(response => console.log(response.data))
+     .catch(error => console.error(error));
+   
+  3. `moment` for date and time manipulation:
+     javascript
+     const moment = require('moment');
+  
+     // Example usage of moment to format the current date
+     const formattedDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+     console.log(formattedDate);
+
+    4. `chalk` for terminal text styling:
+     javascript
+     const chalk = require('chalk');
+  
+     // Example usage of chalk to color text
+     console.log(chalk.blue('This text is blue'));
+
+     5. `jsonwebtoken` for working with JSON Web Tokens:
+     javascript
+     const jwt = require('jsonwebtoken');
+  
+     // Example usage of jsonwebtoken to create and verify a token
+     const secretKey = 'your-secret-key';
+     const token = jwt.sign({ user: 'john.doe' }, secretKey, { expiresIn: '1h' });
+     console.log('Generated Token:', token);
+  
+     jwt.verify(token, secretKey, (err, decoded) => {
+       if (err) {
+         console.error('Token verification failed:', err.message);
+       } else {
+         console.log('Decoded Token:', decoded);
+       }
+     });
